@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-color: #16151d;
+    color: white;
+}
+
+#wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+#main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5D3FD3;
+    padding: 0 2%;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+#logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    text-align: right;
+    font-size: 15px;
+    color: #5D3FD3;
+}
+
+#navigation a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+#navigation a:hover {
+    color: #8a7bc4;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #4a32a8;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    position: fixed;
+}
+
+.sidebar .closebtn {
+    display: none;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    text-align: center;
+    padding-bottom: 15px;
+    flex-direction: column;
+}
+
+.sidebar a:hover{
+    text-decoration: underline;
+}
+
+.openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #5D3FD3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    height: 50px;
+    margin-left: 30px;
+    padding-top:4px;
+}
+
+.toggle {
+    transition: 0.5s;
+    padding: 16px;
+}
+
+#main-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-content p {
+    font-weight: normal;
+}
+
+
+#browse-library {
+    background-color: #282424;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-item {
+    flex: 0 0 calc(20% - 20px);
+    box-sizing: border-box;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    min-height: 85%;
+    object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+    .image-item {
+        flex: 0 0 calc(25% - 20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .image-item {
+        flex: 0 0 calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .image-item {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .image-item {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+}
+.image-item a {
+    display: block;
+    margin-top: 5px;
+    font-size: 15px;
+    color: white;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.image-item p {
+    display: block;
+    margin-bottom: 0;
+    font-size: 10px;
+    color: #999999;
+    text-decoration: none;
+}
+
+.image-item:hover a {
+    color: #5D3FD3;
+}
+
+.image-item:hover img{
+    filter: brightness(60%);
+}
+.image-item {
+    text-align: justify;
+    position: relative;
+    width: calc(20% - 25px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#footer {
+    width: 100%;
+    min-height: 100px;
+    background-color: #5D3FD3;
+    text-align: center;
+    padding: 10px 0;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+#footer img {
+    width: 100px;
+    height: 80px;
+    object-fit: fill;
+    float: left;
+    padding-left: 10px;
+}
+
+#footer p{
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #main-header {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #navigation {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    #footer img {
+        display: block;
+        margin: 0 auto 10px;
+        float: none;
+    }
+
+    #footer p {
+        text-align: center;
+    }
+}
